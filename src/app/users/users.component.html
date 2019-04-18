@@ -1,0 +1,16 @@
+<h2>{{user.name}} Details</h2>
+<div><span>id: </span>{{user.id}}</div>
+<div><span>name: </span>{{user.fname}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="user.fname" placeholder="name"/>
+  </label>
+</div>
+<h2>My Users</h2>
+<div>
+</div>
+<ul class="users">
+  <li *ngFor="let user of users">
+    <span class="badge">{{user.id}}</span> {{user.fname}}
+  </li>
+</ul>
